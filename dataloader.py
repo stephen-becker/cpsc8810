@@ -32,11 +32,11 @@ start_file_index = 0
 for i, path in enumerate(path_to_imgs):
     img_x = add_darkness_effect(path)
     if i < 100:
-        img_x.save(f"train/images/{start_file_index}.jpg")
-        shutil.copy(path_to_gt[i], f"train/depths/{start_file_index}.png")
+        img_x.save(f"dataset/train/images/{start_file_index}.jpg")
+        shutil.copy(path_to_gt[i], f"dataset/train/depths/{start_file_index}.png")
     else:
-        img_x.save(f"val/images/{start_file_index}.jpg")
-        shutil.copy(path_to_gt[i], f"val/depths/{start_file_index}.png")
+        img_x.save(f"dataset/test/images/{start_file_index}.jpg")
+        shutil.copy(path_to_gt[i], f"dataset/test/depths/{start_file_index}.png")
     start_file_index += 1
 
 
